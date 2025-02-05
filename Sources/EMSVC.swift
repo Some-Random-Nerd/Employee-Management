@@ -195,4 +195,6 @@ class EMSVC {
 
         return
     }
+
+    public func loadEmployees(employees: [Int: Employee]) { self.employees = employees }
 }
