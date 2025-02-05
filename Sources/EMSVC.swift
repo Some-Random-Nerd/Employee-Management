@@ -86,15 +86,15 @@ class EMSVC {
     }
 
     private func adds() {
-        print("Enter first name", terminator: " -> ")
+        print("   Enter first name", terminator: " -> ")
 
         let firstName = readLine()!
 
-        print("Enter last name", terminator: " -> ")
+        print("   Enter last name", terminator: " -> ")
 
         let lastName = readLine()!
 
-        print("Enter annual salary", terminator: " -> ")
+        print("   Enter annual salary", terminator: " -> ")
 
         let annualSalary = Int(readLine()!)!
 
@@ -104,19 +104,19 @@ class EMSVC {
     }
 
     private func addh() {
-        print("Enter first name", terminator: " -> ")
+        print("   Enter first name", terminator: " -> ")
 
         let firstName = readLine()!
 
-        print("Enter last name", terminator: " -> ")
+        print("   Enter last name", terminator: " -> ")
 
         let lastName = readLine()!
 
-        print("Enter hourly rate", terminator: " -> ")
+        print("   Enter hourly rate", terminator: " -> ")
 
         let hourlyRate = Int(readLine()!)!
 
-        print("Enter hours/week", terminator: " -> ")
+        print("   Enter hours/week", terminator: " -> ")
 
         let hoursPerWeek = Int(readLine()!)!
 
@@ -127,19 +127,19 @@ class EMSVC {
     }
 
     private func addc() {
-        print("Enter first name", terminator: " -> ")
+        print("   Enter first name", terminator: " -> ")
 
         let firstName = readLine()!
 
-        print("Enter last name", terminator: " -> ")
+        print("   Enter last name", terminator: " -> ")
 
         let lastName = readLine()!
 
-        print("Enter total sales", terminator: " -> ")
+        print("   Enter total sales", terminator: " -> ")
 
         let totalSales = Int(readLine()!)!
 
-        print("Enter commission percent", terminator: " -> ")
+        print("   Enter commission percent", terminator: " -> ")
 
         let commissionPercent = Int(readLine()!)!
 
@@ -153,15 +153,15 @@ class EMSVC {
         for i in self.employees {
             if i.value is SalariedEmployee {
                 print(
-                    "\(i.value.firstName) \(i.value.lastName) - \((i.value as? SalariedEmployee)!.annualSalary / 52)"
+                    "   \(i.value.firstName) \(i.value.lastName) - \((i.value as? SalariedEmployee)!.annualSalary / 52)"
                 )
             } else if i.value is CommissionEmployee {
                 print(
-                    "\(i.value.firstName) \(i.value.lastName) - \((i.value as? CommissionEmployee)!.totalSales * (i.value as? CommissionEmployee)!.commisionPercent / 100 )"
+                    "   \(i.value.firstName) \(i.value.lastName) - \((i.value as? CommissionEmployee)!.totalSales * (i.value as? CommissionEmployee)!.commisionPercent / 100 )"
                 )
             } else if i.value is HourlyEmployee {
                 print(
-                    "\(i.value.firstName) \(i.value.lastName) - \((i.value as? HourlyEmployee)!.hoursPerWeek * (i.value as? HourlyEmployee)!.hourlyRate)"
+                    "   \(i.value.firstName) \(i.value.lastName) - \((i.value as? HourlyEmployee)!.hoursPerWeek * (i.value as? HourlyEmployee)!.hourlyRate)"
                 )
             }
         }
